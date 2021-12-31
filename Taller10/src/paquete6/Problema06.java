@@ -10,5 +10,22 @@ package paquete6;
  * @author reroes
  */
 public class Problema06 {
-    
+
+    public static void main(String[] args) {
+        String[][] estudiantes = {{"Sarah Ward", "Philip Payne"},
+        {"Carrie Burton", "Lauren Rice"},
+        {"Emma Escobar", "Lori Flores"},
+        {"Steven West", "Toni Martin"}
+        };
+        String mensaje = "";
+        for (int fila = 0; fila < estudiantes.length; fila++) {
+            for (int col = 0; col < estudiantes[fila].length; col++) {
+                if (estudiantes[fila][col].length() == 11) {
+                    mensaje = String.format("%s%s\n", mensaje,
+                            estudiantes[fila][col]);
+                }
+            }
+        }
+        System.out.printf("%s", mensaje);
+    }
 }
